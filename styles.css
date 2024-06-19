@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: sans-serif;
+    background: #e3e3e3;
+    color: #000;
+}
+a{
+    position: relative;
+    text-decoration: none;
+    color:#000;
+}
+a:hover{
+    color: rgb(143, 143, 143);
+}
+.nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: +1;
+}
+.header {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-around;
+}
+.text{
+    position: relative;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+}
+.text p{
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+}
+.text-revealer{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.text-revealer:after{
+    content: "";
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 100%;
+    background: #e3e3e3;
+}
+.gallery{
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: relative;
+}
+/*
+.container-grid{
+    width: 100%;
+    height: 85vh;
+    position: absolute;
+    display: inline-block;
+    background-size: 80px 100px;
+    background-image:
+    linear-gradient(to right, rgb(195, 195, 195) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(195, 195, 195) 1px, transparent 1px);
+    border: solid 2px black;
+    margin: 20px;
+}*/
+.img{
+    width: 75px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    margin: 20px;
+    /*filter: grayscale(100%);*/
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+    
+.img:hover {
+    /*filter: none;*/
+    /*filter: saturate(150%);*/
+    filter: blur(2px);
+    transition: ease-in 10s;
+}
+
+    @media (max-width: 900px){
+    .gallery{
+        width: calc(100vw - 70px);
+        height: calc(100vh - 100px);
+    }
+}
